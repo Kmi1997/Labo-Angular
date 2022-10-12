@@ -1,1 +1,38 @@
-<p>register works!</p>
+<h2> Inscription </h2>
+
+<div>
+    <form [formGroup]="subscribeForm">
+        <div>
+            <label for="name"> Nom </label>
+            <input id="name" type="text" formControlName="name">
+        </div>
+
+        <div>
+            <label for="mail"> Mail </label>
+            <input id="mail" type="email" formControlName="mail">
+            <p *ngIf="subscribeForm.controls['mail'].errors && subscribeForm.controls['mail'].touched"> Email incorrect</p>
+        </div>
+
+        <div>
+            <label for="password"> Mot de passe </label>
+            <input id="password" type="password" formControlName="password">
+            <p *ngIf="subscribeForm.controls['password'].errors && subscribeForm.controls['password'].touched"> Mot de
+                passe trop court : minimum 8 caractères.</p>
+        </div>
+
+        <div>
+            <label for="confirmPassword"> Confirmer le mot de passe </label>
+            <input id="confirmPassword" type="password" formControlName="confirmPassword">
+            <p
+                *ngIf="subscribeForm.controls['confirmPassword'].errors && subscribeForm.controls['confirmPassword'].touched">
+                Mot de passe trop court : minimum 8 caractères.</p>
+            <p *ngIf="subscribeForm.errors && subscribeForm.controls['confirmPassword'].touched"> Les mots de passe en
+                correspondent pas </p>
+        </div>
+    </form>
+</div>
+
+<button id="sendSubscribe"> Valider </button>
+
+
+<!-- *ngIf="subscribeForm.valid" id="sendSubscribe" -->

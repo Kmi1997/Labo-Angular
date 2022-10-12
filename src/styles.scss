@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Comforta";
+    src: url('./assets/Comfortaa-VariableFont_wght.ttf');
+}
+*{
+    font-family: "Comforta";
+    color: black;
+}
+
+body{
+    margin: auto;
+   
+}
+

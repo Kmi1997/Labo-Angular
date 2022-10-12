@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FourOfourComponent } from './FourOFour/four-ofour.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({

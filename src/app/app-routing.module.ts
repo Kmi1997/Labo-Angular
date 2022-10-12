@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
-
+  {path: "auth", loadChildren : () => import('./authentification/authentification.module').then(m => m.AuthentificationModule)},
 
   {path: "**", component: FourOfourComponent}
 ];

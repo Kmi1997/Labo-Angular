@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { generateMyForm } from './generateMyForm.form';
 
 @Component({
   selector: 'app-register',
@@ -7,8 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  formsValue!: {
+    name: string;
+    mail: string;
+    password: string;
+    confirmPassword: string;
+  };
 
+  subscribeForm : FormGroup = generateMyForm(this.FormBuild)
+  constructor(private FormBuild : FormBuilder, private httpC : HttpClient) { }
+  
   ngOnInit(): void {
   }
 
