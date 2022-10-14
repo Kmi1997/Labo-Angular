@@ -1,4 +1,8 @@
 <h2> Inscription </h2>
+<p id="validate" *ngIf="send == true"> Inscription validée ! 
+</p>
+
+
 
 <div>
     <form [formGroup]="subscribeForm">
@@ -32,7 +36,13 @@
     </form>
 </div>
 
-<button id="sendSubscribe"> Valider </button>
+<button *ngIf="subscribeForm.valid" id="sendSubscribe"
+        (click)="validateForm()"
+        [disabled]="send"
+        > Valider 
+</button>
+
+<p *ngIf="send"> Vous pouvez maintenant vous connecter !</p>
 
 
 <!-- *ngIf="subscribeForm.valid" id="sendSubscribe" -->

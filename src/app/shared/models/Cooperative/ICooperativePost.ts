@@ -1,10 +1,11 @@
 import { Event } from '../Event/IEvent'
 
-export interface Cooperative { 
-    id: number;
+export interface CooperativePost { 
+
     name: string;
     type: string;
     mail: string;
     password: string;
     event: Event[];
+    
 }

@@ -1,0 +1,105 @@
+{
+  "cooperatives": [
+    {
+      "id": "test",
+      "name": "CoopTest",
+      "password": "12345678",
+      "typeCoopId": 1,
+      "mail": "test@gmail.com"
+    },
+    {
+      "name": "Camille",
+      "password": "12345678",
+      "typeCoopId": 2,
+      "mail": "zizi@gmail.com",
+      "id": "d20aT4P"
+    },
+    {
+      "name": "Hello",
+      "password": "azertyuiop",
+      "typeCoopId": 2,
+      "mail": "caca@gmail.com",
+      "id": "-fp5dUa"
+    },
+    {
+      "name": "Hello",
+      "password": "azertyuiop",
+      "type": "",
+      "mail": "hello@gmail.com",
+      "event": [],
+      "id": "x5adA6r"
+    },
+    {
+      "name": "Frischmann",
+      "password": "&é\"'(§è!",
+      "type": "",
+      "mail": "f@gmail.com",
+      "event": [],
+      "id": "4d-fAe8"
+    }
+  ],
+  "typeCoops": [
+    {
+      "id": 1,
+      "name": "Coopérative de consommateurs"
+    },
+    {
+      "id": 2,
+      "name": "Coopérative de producteurs"
+    },
+    {
+      "id": 3,
+      "name": "Coopérative de travail"
+    },
+    {
+      "id": 4,
+      "name": "Coopérative de travailleurs actionnaires"
+    },
+    {
+      "id": 5,
+      "name": "Coopérative de solidarité"
+    }
+  ],
+  "typeEvents": [
+    {
+      "id": 1,
+      "name": "Conférences"
+    },
+    {
+      "id": 2,
+      "name": "Récoltes de dons"
+    },
+    {
+      "id": 3,
+      "name": "Concerts"
+    },
+    {
+      "id": 4,
+      "name": "Séances d'informations"
+    },
+    {
+      "id": 5,
+      "name": "Tournois sportifs"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "cooperativeId": "-fp5dUa",
+      "date": "01/03/2023"
+    },
+    {
+      "id": 2,
+      "cooperativeId": "d20aT4P",
+      "date": "01/03/2024"
+    },
+    {
+      "id": 3,
+      "cooperativeId": "-fp5dUa",
+      "date": "01/03/2025"
+    }
+  ],
+  "users": [
+    {}
+  ]
+}
