@@ -9,12 +9,16 @@
         <div>
             <label for="name"> Nom </label>
             <input id="name" type="text" formControlName="name">
+            <p *ngIf="subscribeForm.controls['name'] && subscribeForm.controls['name'].touched">Nom requis</p>
         </div>
 
         <div>
             <label for="mail"> Mail </label>
             <input id="mail" type="email" formControlName="mail">
             <p *ngIf="subscribeForm.controls['mail'].errors && subscribeForm.controls['mail'].touched"> Email incorrect</p>
+            <p *ngIf="subscribeForm.controls['mail'].asyncValidator"> Email indisponible</p>
+        
+
         </div>
 
         <div>
@@ -36,7 +40,7 @@
     </form>
 </div>
 
-<button *ngIf="subscribeForm.valid" id="sendSubscribe"
+<button *ngIf="subscribeForm.valid && isMailExist == false" id="sendSubscribe"
         (click)="validateForm()"
         [disabled]="send"
         > Valider 

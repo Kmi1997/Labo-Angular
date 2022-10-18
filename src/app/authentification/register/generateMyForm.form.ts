@@ -1,16 +1,20 @@
+
+import { HttpClient } from "@angular/common/http";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { checkMail } from "./validators/checkMail";
 import { checkPassword } from "./validators/checkPassword.validator";
 
-export function generateMyForm(FormBuild: FormBuilder): FormGroup {
+export function generateMyForm(FormBuild: FormBuilder, httpC : HttpClient): FormGroup {
     return FormBuild.group({
         name: ["", {
 
         }],
 
-        mail: ["", {
+        mail: ["test@gmail.com", {
 
             validators: [Validators.required, Validators.email],
-            updateOn: ''
+            asyncValidator: [checkMail.checkMailCoop(httpC)],
+            updateOn: 'blur'
         }],
 
         password: ["", {
