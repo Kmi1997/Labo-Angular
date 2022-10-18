@@ -1,5 +1,5 @@
 <h2> Inscription </h2>
-<p id="validate" *ngIf="send == true"> Inscription validée ! 
+<p id="validate" *ngIf="send == true"> Inscription validée !
 </p>
 
 
@@ -9,15 +9,16 @@
         <div>
             <label for="name"> Nom </label>
             <input id="name" type="text" formControlName="name">
-            <p *ngIf="subscribeForm.controls['name'] && subscribeForm.controls['name'].touched">Nom requis</p>
+            <p *ngIf="subscribeForm.controls['name'].errors && subscribeForm.controls['name'].touched">Nom requis</p>
         </div>
 
         <div>
             <label for="mail"> Mail </label>
             <input id="mail" type="email" formControlName="mail">
-            <p *ngIf="subscribeForm.controls['mail'].errors && subscribeForm.controls['mail'].touched"> Email incorrect</p>
-            <p *ngIf="subscribeForm.controls['mail'].asyncValidator"> Email indisponible</p>
-        
+            <ng-container *ngIf="subscribeForm.controls['mail'].errors && subscribeForm.controls['mail'].touched">
+                <p *ngIf="subscribeForm.controls['mail'].errors['emailExists'] || subscribeForm.controls['mail'].errors['emailExistsUsers']"> Email déjà utilisé</p>
+                <p *ngIf="subscribeForm.controls['mail'].errors['email']"> Email invalide </p>
+            </ng-container>
 
         </div>
 
@@ -40,10 +41,8 @@
     </form>
 </div>
 
-<button *ngIf="subscribeForm.valid && isMailExist == false" id="sendSubscribe"
-        (click)="validateForm()"
-        [disabled]="send"
-        > Valider 
+<button *ngIf="subscribeForm.valid && isMailExist == false" id="sendSubscribe" (click)="validateForm()"
+    [disabled]="send"> Valider
 </button>
 
 <p *ngIf="send"> Vous pouvez maintenant vous connecter !</p>

@@ -8,89 +8,18 @@
       "mail": "test@gmail.com"
     },
     {
-      "name": "aie",
-      "password": "azertyuiop",
+      "name": "Cam",
+      "password": "azertyuio",
       "type": "",
-      "mail": "test@gmail.com",
-      "event": [],
-      "id": "6xP4PGu"
-    },
-    {
-      "name": "cam",
-      "password": "12345678",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "SyNGPDw"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuiop",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "VPSABss"
+      "mail": "testing@gmail.com",
+      "id": "hsf1GzN"
     },
     {
       "name": "cam",
       "password": "azertyuio",
       "type": "",
-      "mail": "test@gmail.com",
-      "id": "QkMz_AR"
-    },
-    {
-      "name": "Camille",
-      "password": "azertyuiop",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "Hak1ytH"
-    },
-    {
-      "name": "friscm",
-      "password": "azertyuiop",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "D9qXXpZ"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "camill@gmail.com",
-      "id": "GBl550T"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuiop",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "aw0YNyz"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "ApN4LUi"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "sg_6QvJ"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "73HZpaf"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "test@gmail.com",
-      "id": "E36xsBu"
+      "mail": "cam@gmail.com",
+      "id": "0Lz6INJ"
     }
   ],
   "typeCoops": [
@@ -154,7 +83,5 @@
       "date": "01/03/2025"
     }
   ],
-  "users": [
-    {}
-  ]
+  "users": []
 }

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  clicked : boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  connect(){
+    this.clicked = !this.clicked
   }
 
 }

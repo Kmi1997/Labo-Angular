@@ -55,6 +55,12 @@ export class RegisterComponent implements OnInit {
       this.subscribe.validate(this.coop, "coopérative", this.users).subscribe();
       this.send = this.subscribe.send;
   };
+
+
+  debug(){
+    console.log(this.subscribeForm.controls['mail'])
+    console.log(this.subscribeForm.controls['mail'].hasError)
+  }
 };
 
 

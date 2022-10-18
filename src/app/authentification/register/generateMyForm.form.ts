@@ -7,14 +7,14 @@ import { checkPassword } from "./validators/checkPassword.validator";
 export function generateMyForm(FormBuild: FormBuilder, httpC : HttpClient): FormGroup {
     return FormBuild.group({
         name: ["", {
-
+            validators: [Validators.required]
         }],
 
-        mail: ["test@gmail.com", {
+        mail: ["", {
 
             validators: [Validators.required, Validators.email],
-            asyncValidator: [checkMail.checkMailCoop(httpC)],
-            updateOn: 'blur'
+            asyncValidators: [checkMail.checkMailCoop(httpC), checkMail.checkMailUsers(httpC)],
+            updateOn: ''
         }],
 
         password: ["", {

@@ -7,13 +7,15 @@ import { FourOfourComponent } from './FourOFour/four-ofour.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FourOfourComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
