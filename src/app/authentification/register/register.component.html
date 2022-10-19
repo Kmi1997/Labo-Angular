@@ -17,7 +17,7 @@
             <input id="mail" type="email" formControlName="mail">
             <ng-container *ngIf="subscribeForm.controls['mail'].errors && subscribeForm.controls['mail'].touched">
                 <p *ngIf="subscribeForm.controls['mail'].errors['emailExists'] || subscribeForm.controls['mail'].errors['emailExistsUsers']"> Email déjà utilisé</p>
-                <p *ngIf="subscribeForm.controls['mail'].errors['email']"> Email invalide </p>
+                <p *ngIf="subscribeForm.controls['mail'].errors['email'] && subscribeForm.controls['mail'].touched"> Email invalide </p>
             </ng-container>
 
         </div>
@@ -32,17 +32,32 @@
         <div>
             <label for="confirmPassword"> Confirmer le mot de passe </label>
             <input id="confirmPassword" type="password" formControlName="confirmPassword">
-            <p
-                *ngIf="subscribeForm.controls['confirmPassword'].errors && subscribeForm.controls['confirmPassword'].touched">
+            <p *ngIf="subscribeForm.controls['confirmPassword'].errors && subscribeForm.controls['confirmPassword'].touched">
                 Mot de passe trop court : minimum 8 caractères.</p>
             <p *ngIf="subscribeForm.errors && subscribeForm.controls['confirmPassword'].touched"> Les mots de passe en
                 correspondent pas </p>
         </div>
+        <div id="choice">
+            <fieldset>
+                <legend>Type de profil</legend>
+            
+                <div>
+                    <label for="coop">Coopérative</label>
+                  <input formControlName="choice" type="radio" id="coop" name="choice" value="coop" [checked]="true">
+                </div>
+            
+                <div>
+                    <label for="user">Utilisateur</label>
+                  <input formControlName="choice" type="radio" id="user" value="user" name="choice">
+                </div>
+            </fieldset>
+            
+        </div>
     </form>
 </div>
 
-<button *ngIf="subscribeForm.valid && isMailExist == false" id="sendSubscribe" (click)="validateForm()"
-    [disabled]="send"> Valider
+<button *ngIf="subscribeForm.valid" id="sendSubscribe" (click)="validateForm()"
+   [disabled]="send" > Valider
 </button>
 
 <p *ngIf="send"> Vous pouvez maintenant vous connecter !</p>

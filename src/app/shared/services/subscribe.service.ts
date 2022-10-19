@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CooperativePost } from '../models/Cooperative/ICooperativePost';
-import { delay, Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { UsersPost } from '../models/Users/IUserPost';
 
 @Injectable({
@@ -26,7 +26,7 @@ export class SubscribeService {
 
     this.send = !this.send;
     
-    if (type == "Utilisateur"){
+    if (type == "users"){
       this.body = JSON.stringify(Users);
       return this.httpC.post(this.baseURL+'users', this.body, {'headers' : this.headers});
     }

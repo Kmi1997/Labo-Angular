@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoutComponent } from './logout.component';
+import { ProfilCoopComponent } from './profil-coop.component';
 
-describe('LogoutComponent', () => {
-  let component: LogoutComponent;
-  let fixture: ComponentFixture<LogoutComponent>;
+describe('ProfilCoopComponent', () => {
+  let component: ProfilCoopComponent;
+  let fixture: ComponentFixture<ProfilCoopComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogoutComponent ]
+      declarations: [ ProfilCoopComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LogoutComponent);
+    fixture = TestBed.createComponent(ProfilCoopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

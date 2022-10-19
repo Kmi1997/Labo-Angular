@@ -14,7 +14,7 @@ export function generateMyForm(FormBuild: FormBuilder, httpC : HttpClient): Form
 
             validators: [Validators.required, Validators.email],
             asyncValidators: [checkMail.checkMailCoop(httpC), checkMail.checkMailUsers(httpC)],
-            updateOn: ''
+            updateOn: 'blur'
         }],
 
         password: ["", {
@@ -24,8 +24,11 @@ export function generateMyForm(FormBuild: FormBuilder, httpC : HttpClient): Form
 
         confirmPassword: ["", {
             validators: [Validators.required, Validators.minLength(8)]
-        }]
+        }],
 
+        choice: ["", {
+            validators: [Validators.required]
+        }]
     },
         {
             validators: [checkPassword],

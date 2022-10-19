@@ -6,9 +6,10 @@
             <a *ngIf="!clicked" routerLink="auth/login" (click)="connect()"> Se connecter </a>
             <div id="forms" *ngIf="clicked">
                 <label (click)="connect()"> Email </label>
-                <input type="text" placeholder="example@hotmail.com">
+                <input [(ngModel)]="valueName" type="text" placeholder="example@hotmail.com">
                 <label (click)="connect()"> Mot de passe </label>
-                <input type="password">
+                <input [(ngModel)]="valueCode" type="password">
+               <button routerLink="profil" (click)="connectionServe()"> Connexion </button>
             </div>
     </nav>    
 </main>

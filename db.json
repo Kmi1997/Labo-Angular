@@ -6,20 +6,6 @@
       "password": "12345678",
       "typeCoopId": 1,
       "mail": "test@gmail.com"
-    },
-    {
-      "name": "Cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "testing@gmail.com",
-      "id": "hsf1GzN"
-    },
-    {
-      "name": "cam",
-      "password": "azertyuio",
-      "type": "",
-      "mail": "cam@gmail.com",
-      "id": "0Lz6INJ"
     }
   ],
   "typeCoops": [
@@ -83,5 +69,12 @@
       "date": "01/03/2025"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "name": "jacki",
+      "mail": "jack@gmail.com",
+      "password": "&é\"'(§è!",
+      "id": 1
+    }
+  ]
 }
