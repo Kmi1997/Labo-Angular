@@ -18,21 +18,15 @@ export class SubscribeService {
   constructor(private httpC : HttpClient) { }
 
   getData() : Observable <any>{
-    return this.httpC.get(this.baseURL+'cooperatives')
+    return this.httpC.get(this.baseURL+'users')
   };
 
   //Click bouton pour inscription
-  validate(Coop: CooperativePost, type : string, Users: UsersPost) : Observable<any>{
+  validate(Users: UsersPost) : Observable<any>{
 
     this.send = !this.send;
     
-    if (type == "users"){
       this.body = JSON.stringify(Users);
       return this.httpC.post(this.baseURL+'users', this.body, {'headers' : this.headers});
-    }
-    else{
-      this.body = JSON.stringify(Coop);
-      return this.httpC.post(this.baseURL+'cooperatives', this.body, {'headers' : this.headers});
-    }
   };
 }

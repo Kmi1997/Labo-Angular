@@ -1,11 +1,25 @@
 {
-  "cooperatives": [
+  "users": [
     {
       "id": "test",
       "name": "CoopTest",
       "password": "12345678",
       "typeCoopId": 1,
       "mail": "test@gmail.com"
+    },
+    {
+      "name": "hello",
+      "password": "azertyuio",
+      "mail": "hello@gmail.com",
+      "typeCoopId": 5,
+      "id": "LLZJVwc"
+    },
+    {
+      "name": "alvi",
+      "mail": "alvi@gmail.com",
+      "password": "azertyuio",
+      "typeCoopId": null,
+      "id": "U0LzGPv"
     }
   ],
   "typeCoops": [
@@ -23,11 +37,11 @@
     },
     {
       "id": 4,
-      "name": "Coopérative de travailleurs actionnaires"
+      "name": "Coopérative de solidarité"
     },
     {
       "id": 5,
-      "name": "Coopérative de solidarité"
+      "name": "Coopérative non définie"
     }
   ],
   "typeEvents": [
@@ -67,14 +81,6 @@
       "id": 3,
       "cooperativeId": "-fp5dUa",
       "date": "01/03/2025"
-    }
-  ],
-  "users": [
-    {
-      "name": "jacki",
-      "mail": "jack@gmail.com",
-      "password": "&é\"'(§è!",
-      "id": 1
     }
   ]
 }

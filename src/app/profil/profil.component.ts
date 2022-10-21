@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConnectionService } from '../shared/services/connection.service';
 import { SearchAuthService } from '../shared/services/search-auth.service';
 
 @Component({
@@ -9,17 +10,16 @@ import { SearchAuthService } from '../shared/services/search-auth.service';
 })
 export class ProfilComponent implements OnInit {
 
+  name: string = this.connect.valueName
+  code: string = this.connect.valueCode
 
-  constructor(private search : SearchAuthService, private router : Router) { }
+  constructor(
+    private search: SearchAuthService,
+    private router: Router,
+    private connect: ConnectionService) { }
 
   ngOnInit(): void {
-    
-    this.changeDirection()
+
   }
 
-  changeDirection(){
-    if(this.search.profilCoop){
-      this.router.navigateByUrl("profilCoop")
-    }
-  }
 }

@@ -13,7 +13,7 @@ export function generateMyForm(FormBuild: FormBuilder, httpC : HttpClient): Form
         mail: ["", {
 
             validators: [Validators.required, Validators.email],
-            asyncValidators: [checkMail.checkMailCoop(httpC), checkMail.checkMailUsers(httpC)],
+            asyncValidators: [checkMail.checkMailCoop(httpC)],
             updateOn: 'blur'
         }],
 

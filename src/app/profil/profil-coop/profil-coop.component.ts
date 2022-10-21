@@ -10,6 +10,8 @@ export class ProfilCoopComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("composant profilCoop chargé");
+
   }
 
 }

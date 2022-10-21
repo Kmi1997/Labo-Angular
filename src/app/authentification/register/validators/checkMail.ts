@@ -9,9 +9,7 @@ export class checkMail {
     static checkMailCoop(httpC: HttpClient): AsyncValidatorFn {
 
         return (control: AbstractControl) => {
-            return httpC.get(`http://localhost:3000/cooperatives?mail=${encodeURI(control.value)}`).pipe(
-                delay(1000)
-            ).pipe(
+            return httpC.get(`http://localhost:3000/users?mail=${encodeURI(control.value)}`).pipe(
                 map((exists: any) => {
                     console.log(exists)
                     if (exists.length > 0) {
@@ -25,28 +23,6 @@ export class checkMail {
             )
         }
     }
-
-
-    static checkMailUsers(httpC: HttpClient): AsyncValidatorFn {
-
-        return (control: AbstractControl) => {
-            return httpC.get(`http://localhost:3000/users?mail=${encodeURI(control.value)}`).pipe(
-                delay(1000)
-            ).pipe(
-                map((exists: any) => {
-                    console.log(exists)
-                    if (exists.length > 0) {
-                        return { emailExistsUsers: true }
-                    }
-                    else {
-                        console.log("ok")
-                        return null
-                    }
-                })
-            )
-        }
-    }
-
 
 }
 
