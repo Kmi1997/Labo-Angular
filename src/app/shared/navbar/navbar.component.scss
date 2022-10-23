@@ -4,6 +4,7 @@ main {
     height: $heightNav+vh;
     background-color: darkorange;
     opacity: 70%;
+   
 }
 
 h1{
@@ -16,6 +17,7 @@ nav {
     width: 100%;
     height: $heightNav+vh;
     align-items: center;
+   
 }
 
 main>nav>a {
@@ -25,8 +27,8 @@ main>nav>a {
 
 #forms{
     display: flex;
-    align-items: flex-end;
     flex-direction: row;
+    align-items:center;
     width: 50%;
     margin-left: 3%;
     label, button{
@@ -34,7 +36,29 @@ main>nav>a {
         margin-right: 1%;
 
     }
+
+    p{
+        font-size: 0.7em;
+        color: red;
+        font-weight: 600;
+        margin-left: 3%;
+    }
+
     input{
         align-items:baseline;
     }
 }
+
+#isConnected{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin-left: 5%;
+    font-weight: 700;
+    width: 50%;
+
+    p{
+        margin-left: 5%;
+    }
+}
+

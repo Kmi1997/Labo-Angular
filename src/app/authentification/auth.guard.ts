@@ -20,8 +20,12 @@ export class AuthGuard implements CanActivate {
 
   canActivate() {
 
-    return true
-}
+    if (sessionStorage.length > 0)
+      return true
+    else {
+      return false
+    }
+  }
 
 
 }

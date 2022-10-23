@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MinValidator } from '@angular/forms';
-import { find, forkJoin, last, lastValueFrom, map, Observable, of, Subject, Subscription } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ConnectionService } from './connection.service';
 
 @Injectable({
@@ -21,6 +20,9 @@ export class SearchAuthService {
             map((array : any) => {
                 if (array.length > 0 && array[0].password == code){
                     console.log("ok")
+                    sessionStorage.setItem('name', array[0].name )
+                    sessionStorage.setItem('password', array[0].password)
+                    sessionStorage.setItem('type', array[0].typeCoopId)
                     return true
                 }
                 else{
@@ -46,61 +48,4 @@ export class SearchAuthService {
         )
     }
 
-    // searchMail(value: string, type: string): Observable<boolean> {
-
-    //     return this.httpC.get(`http://localhost:3000/${encodeURIComponent(type)}?mail=${encodeURIComponent(value)}`)
-    //         .pipe(
-    //             map((exists: any) => {
-    //                 console.log(exists)
-    //                 console.log(exists.length);
-
-    //                 if (exists.length > 0) {
-    //                     // this.profilName = exists[0].name
-    //                     if (type == "cooperatives") {
-    //                         this.profilCoop = true
-    //                     }
-    //                     else {
-    //                         this.profilUser = true
-    //                     }
-    //                     return true
-    //                 }
-    //                 else {
-    //                     return false
-    //                 }
-    //             })
-    //         )
-    // }
-
-    // matchPassword(valueName: string, valueCode: string, type: string): Observable<boolean> {
-    //     return this.httpC.get(`http://localhost:3000/${encodeURIComponent(type)}?password=${encodeURIComponent(valueCode)}`).pipe(
-    //         map((exists: any) => {
-    //             console.log(encodeURI(valueCode))
-    //             if (exists.length > 0) {
-    //                 console.log(exists)
-    //                 if (find(exists => exists == encodeURIComponent(valueName)).length == 1) {
-    //                     return true
-    //                 }
-    //                 else {
-    //                     return false
-    //                 }
-    //             }
-    //             else {
-    //                 console.log("Pas trouvé de correspondance")
-    //                 console.log(exists);
-    //                 return false
-    //             }
-    //         })
-    //     )
-    // }
-
-
 }
-    //
-
-
-    // this.codeCoop = this.matchPassword(this.connect.valueName, this.connect.valueCode, this.type1)
-    // this.codeUser = this.matchPassword(this.connect.valueName, this.connect.valueCode, this.type2)
-
-
-
-// 

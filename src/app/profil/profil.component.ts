@@ -10,8 +10,10 @@ import { SearchAuthService } from '../shared/services/search-auth.service';
 })
 export class ProfilComponent implements OnInit {
 
-  name: string = this.connect.valueName
-  code: string = this.connect.valueCode
+  type : string | null = sessionStorage.getItem('type')
+  name: string | null = sessionStorage.getItem('name')
+  welcome : string = "Bienvenue à la société "
+  hello : string = "Bonjour, "
 
   constructor(
     private search: SearchAuthService,
@@ -19,7 +21,6 @@ export class ProfilComponent implements OnInit {
     private connect: ConnectionService) { }
 
   ngOnInit(): void {
-
   }
 
 }

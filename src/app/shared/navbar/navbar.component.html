@@ -3,14 +3,21 @@
             <h1> Labo Angular </h1>
             <a routerLink=""> Accueil </a>
             <a routerLink="auth/register"> Inscription </a>
-            <a *ngIf="!clicked" (click)="connect()"> Se connecter </a>
+            <a *ngIf="!clicked && session == 0 " (click)="connect()"> Se connecter </a>
+
             <div id="forms" *ngIf="clicked">
                 <label (click)="connect()"> Email </label>
                 <input [(ngModel)]="valueName" type="text" placeholder="example@hotmail.com">
-                <p *ngIf="!okToConnection"> Email inconnu </p>
                 <label (click)="connect()"> Mot de passe </label>
                 <input [(ngModel)]="valueCode" type="password">
-               <button routerLink="auth/profil" (click)="connectionServe()"> Connexion </button>
+                <button routerLink="auth/profil" (click)="connectionServe()"> Connexion </button>
+                <p *ngIf="!okToConnection"> Email inconnu ou mot de passe incorrect</p>
             </div>
-    </nav>    
+
+            <div id="isConnected" *ngIf="session > 0">
+                <p> Connecté </p>
+                <p routerLink="auth/profil"> Voir profil </p>
+                <p routerLink="" (click)="logout()"> Se déconnecter </p>
+            </div>
+        </nav>    
 </main>

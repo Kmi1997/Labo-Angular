@@ -4,7 +4,7 @@
       "id": "test",
       "name": "CoopTest",
       "password": "12345678",
-      "typeCoopId": 1,
+      "typeCoopId": 5,
       "mail": "test@gmail.com"
     },
     {
