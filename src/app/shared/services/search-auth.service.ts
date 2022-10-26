@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { ConnectionService } from './connection.service';
 
+
 @Injectable({
     providedIn: 'root'
 })
@@ -18,8 +19,9 @@ export class SearchAuthService {
 
         return this.httpC.get(this.baseURL + `?mail=${mail}`).pipe(
             map((array : any) => {
-                if (array.length > 0 && array[0].password == code){
+                if (array.length > 0 && array[0].password == code) {
                     console.log("ok")
+                    sessionStorage.setItem('id', array[0].id)
                     sessionStorage.setItem('name', array[0].name )
                     sessionStorage.setItem('password', array[0].password)
                     sessionStorage.setItem('type', array[0].typeCoopId)
@@ -36,7 +38,6 @@ export class SearchAuthService {
     getData(mail : string) : Observable<boolean>{
         return this.httpC.get(this.baseURL + `?mail=${mail}`).pipe(
             map((array : any) => {
-                console.log(array[0].typeCoopId);
                 
                if(array[0].typeCoopId == null){
                 return false

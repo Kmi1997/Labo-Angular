@@ -7,16 +7,22 @@
 
             <div id="forms" *ngIf="clicked">
                 <label (click)="connect()"> Email </label>
-                <input [(ngModel)]="valueName" type="text" placeholder="example@hotmail.com">
+                <input [ngStyle]="{'border-color': okToConnection ? 'null':'red'}" [(ngModel)]="valueName" type="text" placeholder="example@hotmail.com">
+
                 <label (click)="connect()"> Mot de passe </label>
-                <input [(ngModel)]="valueCode" type="password">
-                <button routerLink="auth/profil" (click)="connectionServe()"> Connexion </button>
-                <p *ngIf="!okToConnection"> Email inconnu ou mot de passe incorrect</p>
+                <input [ngStyle]="{'border-color': okToConnection ? 'null':'red'}" [(ngModel)]="valueCode" type="password">
+                <button (click)="connectionServe()"> Connexion </button>
+
+                <div *ngIf="!okToConnection" id="error">
+                    <p *ngIf="!okToConnection"> Email inconnu ou mot de passe incorrect</p>
+                </div>
             </div>
 
+           
+
             <div id="isConnected" *ngIf="session > 0">
-                <p> Connecté </p>
-                <p routerLink="auth/profil"> Voir profil </p>
+                <img src="../../../assets/icon-valide.png">
+                <p routerLink='auth/profil/{{id}}'> Voir profil </p>
                 <p routerLink="" (click)="logout()"> Se déconnecter </p>
             </div>
         </nav>    

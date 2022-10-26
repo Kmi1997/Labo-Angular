@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   clicked: boolean = false
   currentlyRoute: string = ""
   session: number = sessionStorage.length
+  id : string | null = sessionStorage.getItem('id')
 
   valueName: string = ""
   valueCode: string = ""
@@ -28,7 +29,7 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-console.log(sessionStorage.length)
+
   }
 
 
@@ -45,9 +46,12 @@ console.log(sessionStorage.length)
       if (response) {
         this.search.getData(this.connection.valueName).subscribe({
           next: x => {
-            this.router.navigateByUrl("auth/profil")
+            this.router.navigateByUrl(`auth/profil/${this.id}`)
+            console.log(this.id);
+            
             this.clicked = false
             this.session = sessionStorage.length
+            this.okToConnection = true
           },
           error: err => console.log(err),
           complete: () => console.log("terminé")
@@ -62,5 +66,6 @@ console.log(sessionStorage.length)
   logout() {
     sessionStorage.clear();
     this.session = 0
+    this.valueCode = ""
   }
 }

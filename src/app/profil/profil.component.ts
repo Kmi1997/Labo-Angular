@@ -12,13 +12,10 @@ export class ProfilComponent implements OnInit {
 
   type : string | null = sessionStorage.getItem('type')
   name: string | null = sessionStorage.getItem('name')
-  welcome : string = "Bienvenue à la société "
+  welcome : string = "Bienvenue au personnel de "
   hello : string = "Bonjour, "
 
-  constructor(
-    private search: SearchAuthService,
-    private router: Router,
-    private connect: ConnectionService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

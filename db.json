@@ -1,25 +1,18 @@
 {
   "users": [
     {
-      "id": "test",
-      "name": "CoopTest",
-      "password": "12345678",
-      "typeCoopId": 5,
-      "mail": "test@gmail.com"
-    },
-    {
-      "name": "hello",
-      "password": "azertyuio",
-      "mail": "hello@gmail.com",
-      "typeCoopId": 5,
-      "id": "LLZJVwc"
-    },
-    {
-      "name": "alvi",
-      "mail": "alvi@gmail.com",
-      "password": "azertyuio",
+      "name": "Loic",
+      "password": "azertyui",
+      "mail": "loic@gmail.com",
       "typeCoopId": null,
-      "id": "U0LzGPv"
+      "id": 1
+    },
+    {
+      "name": "BelGrain",
+      "password": "azertyui",
+      "mail": "BelGrain@gmail.com",
+      "typeCoopId": 5,
+      "id": 2
     }
   ],
   "typeCoops": [

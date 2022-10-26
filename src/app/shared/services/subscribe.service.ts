@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CooperativePost } from '../models/Cooperative/ICooperativePost';
 import { Observable } from 'rxjs';
 import { UsersPost } from '../models/Users/IUserPost';
 

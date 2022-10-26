@@ -17,7 +17,7 @@ nav {
     width: 100%;
     height: $heightNav+vh;
     align-items: center;
-   
+   flex-wrap: wrap;
 }
 
 main>nav>a {
@@ -26,22 +26,13 @@ main>nav>a {
 }
 
 #forms{
-    display: flex;
-    flex-direction: row;
     align-items:center;
     width: 50%;
     margin-left: 3%;
+
     label, button{
         margin-left: 3%;
         margin-right: 1%;
-
-    }
-
-    p{
-        font-size: 0.7em;
-        color: red;
-        font-weight: 600;
-        margin-left: 3%;
     }
 
     input{
@@ -60,5 +51,25 @@ main>nav>a {
     p{
         margin-left: 5%;
     }
+    img{
+        width: 5%;
+        height: auto;
+    }
 }
+
+#error{
+    font-size: 0.7em;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
+    p{
+        text-align: center;
+        color: red;
+        font-weight: 800;
+    }
+}
+
+
 
